@@ -633,3 +633,19 @@ Thêm vào package.json:
     "test:install": "npx playwright install"
   }
 }
+import { test, expect } from '@playwright/test';
+
+test('basic test example', async ({ page }) => {
+  // Điều hướng đến trang
+  await page.goto('https://playwright.dev/');
+
+  // Kiểm tra title
+  await expect(page).toHaveTitle(/Playwright/);
+
+  // Click vào link
+  await page.getByRole('link', { name: 'Get started' }).click();
+
+  // Kiểm tra URL
+  await expect(page).toHaveURL(/.*intro/);
+});
+
