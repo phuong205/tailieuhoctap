@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",             // thay "nodenext" bằng "CommonJS" để có __dirname mặc định
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM"],         // thêm DOM vì Playwright cần API trình duyệt
+    "types": ["node", "playwright"],  // thêm types của node và playwright
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  }
+}
